@@ -9,7 +9,7 @@ export default class Modal extends Component {
       this.state= {
                  isSelected: [false,false,false,false],
                  pledge: [...this.props.pledge],
-                 minPledge: [...this.props.minPledge]
+                 minPledge: [...this.props.minPledge],
       }
       this.placeFocus= this.placeFocus.bind(this);
     }
@@ -54,7 +54,7 @@ export default class Modal extends Component {
                 type='modal'
                 name='Pledge whit no reward' 
                 pledge={this.props.pledge[0]} 
-                minPledge={this.props.minPledge[0]}
+                minPledge={this.state.minPledge[0]}
                 definition="Choose to support us whitout a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email."
                 amount={1}
                 errorMessage={this.props.errorMessage}/>
@@ -71,7 +71,7 @@ export default class Modal extends Component {
                 minPledge={this.props.minPledge[1]}
                 formSubmit = {this.props.formSubmit}
                 definition="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list."
-                amount={101}
+                amount={this.props.amount[0]}
                 errorMessage={this.props.errorMessage}/>
                  <Reward 
                 key = {2}
@@ -87,7 +87,7 @@ export default class Modal extends Component {
                 minPledge={this.props.minPledge[2]}
                 definition="You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
                 member list. Shipping is included."
-                amount={64}
+                amount={this.props.amount[1]}
                 errorMessage={this.props.errorMessage}/>
                  <Reward 
                key = {3}
@@ -103,7 +103,7 @@ export default class Modal extends Component {
                 minPledge={this.props.minPledge[3]}
                 definition="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
                 to our Backer member list. Shipping is included."
-                amount={0}
+                amount={this.props.amount[2]}
                 errorMessage={this.props.errorMessage}/>
               </div>
               </div> 

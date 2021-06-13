@@ -21,6 +21,7 @@ export default class App extends Component {
             sucessDisplay: false,
             totalBackers: 5007,
             amountBacked: 89914,
+            amountLeft: [101,64,0],
         } 
         this.selectBtnHandler = this.selectBtnHandler.bind(this);
         this.modalCloseBtnHandler= this.modalCloseBtnHandler.bind(this);
@@ -37,6 +38,7 @@ export default class App extends Component {
     }
     selectBtnHandler(e){
         this.setState( {modalDisplay: true} )
+        window.scroll(0, 0);
         this.closeMenu();
     }
     modalCloseBtnHandler(e) {
@@ -91,6 +93,9 @@ export default class App extends Component {
         }
         let newBackers = this.state.totalBackers+1;
         let backedAmount = this.state.amountBacked+(Number(value));
+        let newAmountLeft = this.state.amountLeft.slice();
+        newAmountLeft[num-1] --;
+        this.setState({amountLeft: newAmountLeft})
         this.setState({totalBackers:newBackers})
         this.setState({amountBacked:backedAmount})
         this.setState({errorMessage:''})
@@ -126,6 +131,7 @@ export default class App extends Component {
                 backers = {this.addComma(this.state.totalBackers)}
                 amountBacked= {this.addComma(this.state.amountBacked)}
                 progress= {(this.state.amountBacked/100000)*100}
+                amountLeft= {this.state.amountLeft}
                 />
                 <Modal 
                 formSubmit ={this.formSubmit}
@@ -138,6 +144,7 @@ export default class App extends Component {
                 mouseOut = {this.modalMouseOutHandler} 
                 onClick= {this.modalClickHandler}
                 inputClick={this.inputValidate} 
+                amount={this.state.amountLeft}
                 errorMessage={this.state.errorMessage}
                 clearMessage={this.clearMessage}/>
                 <Success display={this.state.sucessDisplay}

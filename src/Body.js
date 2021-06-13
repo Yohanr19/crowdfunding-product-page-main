@@ -7,11 +7,11 @@ import Reward from './Reward'
 
 
 export default class Body extends Component {
-
     constructor(props){
         super(props);
         this.state= {
         }
+        console.log(this.props.amountLeft)
     }
     rewardClickHandler(num){
         if (num===undefined){
@@ -32,7 +32,8 @@ export default class Body extends Component {
                 name='Bamboo Stand' 
                 pledge={25} 
                 definition="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list."
-                amount={101}/>
+                amount={this.props.amountLeft[0]}
+                />
                  <Reward 
                    onClick= {this.rewardClickHandler}
                  btnClickHandler = {this.props.btnClickHandler}
@@ -41,7 +42,7 @@ export default class Body extends Component {
                 pledge={75} 
                 definition="You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
                 member list. Shipping is included."
-                amount={64}/>
+                amount={this.props.amountLeft[1]}/>
                  <Reward 
                    onClick= {this.rewardClickHandler}
                  btnClickHandler = {this.props.btnClickHandler}
@@ -50,7 +51,7 @@ export default class Body extends Component {
                 pledge={200} 
                 definition="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
                 to our Backer member list. Shipping is included."
-                amount={0}/>
+                amount={this.props.amountLeft[2]}/>
      
             </div>
         )

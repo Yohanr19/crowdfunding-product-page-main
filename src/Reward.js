@@ -2,9 +2,16 @@ import React from 'react'
 import './Reward.css'
 
 const Reward = (props) => {
-    let formSubmit = ()=> {}
+    
+    let formSubmit = (e)=> {
+        e.preventDefault()
+    }
     let inputClick = ()=> {}
-    if (props.type==='modal') {
+    let onClickBtn = ()=> {}
+    if(props.amount>0){
+        onClickBtn = props.btnClickHandler;
+    }
+    if (props.type==='modal' && props.amount>0) {
     formSubmit = props.formSubmit;
     inputClick = props.inputClick;
     }    
@@ -29,7 +36,7 @@ const Reward = (props) => {
                         <strong>{props.amount}</strong>left</p>
                     <button className={props.amount>0?'stock':'no-stock'} 
                     style={props.type==='modal'?{display:'none'}:{display:'block'}}
-                    onClick= {props.btnClickHandler}
+                    onClick= {onClickBtn}
                     >
                     {props.amount>0?'Select Reward':'Out of Stock'}
                     </button>
@@ -40,7 +47,7 @@ const Reward = (props) => {
                                 $<label><input 
                                 onChange={(e)=> props.onChange(props.elem,e)}
                                 className='pledge-input' type='text' value={props.pledge}></input></label> 
-                                <h7 className='error-message'>{props.errorMessage}</h7>
+                                <h5 className='error-message'>{props.errorMessage}</h5>
                              </div>
                              <button onClick={(e)=>inputClick(props.elem, e)} type='submit' className='submit-btn'>
                                     Continue
