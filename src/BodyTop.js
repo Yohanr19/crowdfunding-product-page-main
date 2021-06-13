@@ -6,7 +6,7 @@ import './BodyTop.css'
 const BodyTop = (props) => {
     return (
         <div id='body-top'> 
-        <img src={mastercraft} alt='mastercraft icon'/>
+        <img className='mastercraft' src={mastercraft} alt='mastercraft icon'/>
          <h1>Mastercraft Bamboo Monitor Riser</h1>   
          <p> A beautifully handcrafted monitor stand to reduce neck and eye strain.</p>
          <div>

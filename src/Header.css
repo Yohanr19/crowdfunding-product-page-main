@@ -16,10 +16,18 @@
     min-width: 15%;
     max-height: 2rem;
     float: left;
-
  }
  #iconHam-Close{
      max-width: 35px;
      max-height: 35px;
      float: right;
+ }
+ @media screen and (min-width: 1000px) {
+     #iconHam-Close{
+         visibility: hidden;
+     }
+     #header{ 
+        background-image: url(./images/image-hero-desktop.jpg);
+        padding-bottom: 325px;
+    }
  }

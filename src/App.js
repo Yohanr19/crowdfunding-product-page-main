@@ -25,8 +25,6 @@ export default class App extends Component {
         } 
         this.selectBtnHandler = this.selectBtnHandler.bind(this);
         this.modalCloseBtnHandler= this.modalCloseBtnHandler.bind(this);
-        this.modalMouseHoverHandler=this.modalMouseHoverHandler.bind(this);
-        this.modalMouseOutHandler= this.modalMouseOutHandler.bind(this);
         this.modalClickHandler=this.modalClickHandler.bind(this);
         this.closeMenu=this.closeMenu.bind(this);
         this.openMenu=this.openMenu.bind(this);
@@ -43,12 +41,6 @@ export default class App extends Component {
     }
     modalCloseBtnHandler(e) {
         this.setState( {modalDisplay: false} )
-    }
-    modalMouseHoverHandler(e) {
-        this.setState({isModalOnHover: true})
-    }
-    modalMouseOutHandler(e){
-        this.setState({isModalOnHover: false})
     }
     modalClickHandler(e){
         if(!e.target.matches('#modal')) e.stopPropagation();
@@ -126,12 +118,17 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <Header icon={this.state.menuIcon} display={this.state.menuDisplay} menuToggle={this.menuToggle}/>
+                <Header icon={this.state.menuIcon} 
+                display={this.state.menuDisplay} 
+                modalOn= {this.selectBtnHandler}
+                menuToggle={this.menuToggle}/>
                 <Body btnClickHandler={this.selectBtnHandler}
                 backers = {this.addComma(this.state.totalBackers)}
                 amountBacked= {this.addComma(this.state.amountBacked)}
-                progress= {(this.state.amountBacked/100000)*100}
                 amountLeft= {this.state.amountLeft}
+                minPledge={this.state.minPledge}
+                progress= {(this.state.amountBacked/100000)*100}
+          
                 />
                 <Modal 
                 formSubmit ={this.formSubmit}
@@ -140,8 +137,6 @@ export default class App extends Component {
                 minPledge={this.state.minPledge}
                 pledge= {this.state.pledge} 
                 closeBtn= {this.modalCloseBtnHandler} 
-                mouseOver = {this.modalMouseHoverHandler} 
-                mouseOut = {this.modalMouseOutHandler} 
                 onClick= {this.modalClickHandler}
                 inputClick={this.inputValidate} 
                 amount={this.state.amountLeft}

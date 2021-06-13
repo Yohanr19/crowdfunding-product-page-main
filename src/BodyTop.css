@@ -1,18 +1,25 @@
 #body-top{
     display: grid;
-    place-items: center;
     text-align: center;
     position: relative;
     top: -30px;
+    background-color: white;
+    padding-bottom: 2rem;
+    border-radius: 10px;
 }
 #body-top h1 {
     padding: 1rem 2rem;
     max-width: 30ch;
+    justify-self: center;
  }
  #body-top p {
     padding: 1rem 2rem;
     max-width: 45ch;
     color: var(--DarkGray);
+    justify-self: center;
+ }
+ #body-top div{
+    justify-self: center;
  }
  #body-top div button{
     float: left;
@@ -29,5 +36,21 @@
      float: right;
      margin-left: 1rem;
      border-radius: 60%;
-     
     }
+.mastercraft{
+justify-self: center;
+position: relative;
+top: -30px;
+}
+@media screen and (min-width: 1000px) {
+   #body-top div{
+      justify-self: unset;
+   }   
+   #body-top div img{
+      margin-right: 2rem;
+   }
+   #body-top div button{
+      margin-left: 2rem;
+   }
+}
+

@@ -6,8 +6,9 @@ if(progress> 100) progress=100;
 let progressString = progress+'%';
     return (
         <div id='stats'>
+            <div className='stat-container'>
             <div className='stat'>
-                <h4>
+                <h4> 
                     ${props.amountBacked}
                 </h4>
                 <p>
@@ -29,6 +30,7 @@ let progressString = progress+'%';
                 <p>
                     days left
                 </p>
+            </div>
             </div>
             <div id='progress-container'> 
                 <div className='bar'> 

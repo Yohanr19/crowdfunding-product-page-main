@@ -4,9 +4,9 @@ import './Menu.css'
 const Menu = (props) => {
     return (
         <div id='menu' className={props.display?'show':'hide'}>
-            <p>About</p>
-            <p>Discover</p>
-            <p>Get Started</p>
+            <a href='#about'>About</a>
+            <a href='#discover'>Discover</a>
+            <a onClick={props.modalOn} href='#modal'>Get Started</a>
         </div>
     )
 }

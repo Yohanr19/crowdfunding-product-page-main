@@ -14,7 +14,8 @@ export default class Header extends Component {
                 src={this.props.icon}
                 alt=''/>
                 </div> 
-                <Menu display={this.props.display}/>
+                <Menu display={this.props.display}
+                modalOn= {this.props.modalOn}/>
             </div>
         )
     }

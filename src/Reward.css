@@ -3,6 +3,7 @@
     padding: 1rem 1.5rem;
     margin: 1.5rem auto;
     border-radius: 10px;
+    background-color: white;
 }
 .selected {
     border: 3px solid var(--DarkCyan);
@@ -74,6 +75,7 @@
 }
 .pledge-header{
     align-items: center;
+    display: flex;
 }
 .pledge-input-container{
     min-width: 4rem;
@@ -103,4 +105,27 @@
     font-size: 0.9rem;
     font-weight: 500;
     padding: 1.5rem 0;
+}
+
+@media screen and (min-width: 1000px) {
+   .name-pledge{
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+   }
+   .amount-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   }
+ 
+   .container-input-btn{
+        position: relative;
+        left: 0;
+        transform: translateX(25%);
+   }
+     
 }

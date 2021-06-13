@@ -1,9 +1,12 @@
-#stats{
+#stats {
     margin-top: 2rem;
-    background-color: whitesmoke;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+}
+.stat-container{
     display: flex;
     place-items: center;
-    padding: 1rem 1.5rem;
     flex-direction: column;
 }
 .stat{
@@ -25,12 +28,28 @@
     background-color: var(--DarkGray);
     height: 2rem;
     position: relative;
+    border-radius: 30px;
 }
 .bar-progress {
-    background-color: var(--DarkCyan);
+    background-color: var(--ModerateCyan);
     height: 2rem;
     position: absolute;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
 }
 #progress-container{
-    width: 100%;
+    width: 80%;
+    margin: 1rem auto;
+    background-color: white;
+ 
+}
+@media screen and (min-width: 1000px) {
+    .stat-container{flex-direction: row;}
+    :last-of-type.stat {
+        border-left: 0.5px solid var(--DarkGray);
+    }
+    :first-of-type.stat {
+        border-right: 0.5px solid var(--DarkGray);
+    }
 }
