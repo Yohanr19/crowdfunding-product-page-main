@@ -49,7 +49,7 @@ const Reward = (props) => {
                                 $<label><input 
                                 onChange={(e)=> props.onChange(props.elem,e)}
                                 className='pledge-input' type='text' value={props.pledge}></input></label> 
-                                <h5 className='error-message'>{props.errorMessage}</h5>
+                                <div className='error-message'>{props.errorMessage}</div>
                              </div>
                              <button onClick={(e)=>inputClick(props.elem, e)} type='submit' className='submit-btn'>
                                     Continue

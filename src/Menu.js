@@ -5,7 +5,7 @@ const Menu = (props) => {
     return (
         <div id='menu' className={props.display?'show':'hide'}>
             <a href='#about'>About</a>
-            <a href='#discover'>Discover</a>
+            <a href='#body-top'>Discover</a>
             <a onClick={props.modalOn} href='#modal'>Get Started</a>
         </div>
     )
