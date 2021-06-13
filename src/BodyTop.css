@@ -1,0 +1,33 @@
+#body-top{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: relative;
+    top: -30px;
+}
+#body-top h1 {
+    padding: 1rem 2rem;
+    max-width: 30ch;
+ }
+ #body-top p {
+    padding: 1rem 2rem;
+    max-width: 45ch;
+    color: var(--DarkGray);
+ }
+ #body-top div button{
+    float: left;
+    background-color: var(--ModerateCyan);
+    min-width: 190px ;
+    max-width: 66%;
+    padding: 1rem 2rem;
+    color: white;
+    border-radius: 2rem;
+    border: none;
+    font-weight: 700;
+ }
+ #body-top div img{
+     float: right;
+     margin-left: 1rem;
+     border-radius: 60%;
+     
+    }

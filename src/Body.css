@@ -1,0 +1,93 @@
+#pageBody{
+    position: relative;
+    top: -3rem;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+}
+#app{
+    position: relative;
+}
+#modal{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal-content{
+    margin: 5rem auto;
+    width: 92%;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 2;
+    padding-bottom: 3rem;
+}
+#modal-close{
+    position:absolute;
+    height: 1rem;
+    right: 0;
+    top: 25%;
+}
+.back-project-top {
+    display: flex;
+    position: relative;
+}
+.back-project-top h3{
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1.2rem 0rem;
+    padding-right: 2rem;
+}
+#back-project {
+    width: 85%;
+    margin: 2rem auto;
+}
+#back-project p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 1.2rem 0rem;
+    color: var(--DarkGray);
+    max-width: 80ch;
+}
+#modal-success{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#modal-success-content{
+    margin: 5rem auto;
+    width: 92%;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 5;
+    padding-bottom: 3rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+#modal-success-content img{
+    margin-top: 1rem;
+}
+#modal-success-content button{
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: var(--ModerateCyan);
+    color: white;
+}
+#modal-success-content p{
+   margin: 1rem 0;
+   color: var(--DarkGray);
+   font-size: 1.1rem;
+   max-width: 70ch;
+}
+#modal-success-content h2{
+    margin: 1rem 0;
+    font-size: 1.6rem;
+}

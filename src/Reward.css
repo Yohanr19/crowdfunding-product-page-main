@@ -1,0 +1,106 @@
+.reward{
+    width: 90%;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+}
+.selected {
+    border: 3px solid var(--DarkCyan);
+}
+.no-selected{
+    border: 1px solid var(--DarkGray);
+}
+.reward h3{
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+.reward h4{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ModerateCyan);
+    margin-bottom: 1rem;
+}
+.reward p{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--DarkGray);
+    padding: 1.5rem 0;
+}
+.reward strong{
+    font-size: 3rem;
+    color: black;
+    padding-right: 1rem;
+}
+.reward button {
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: 2.5rem;
+}
+.stock {
+    background-color: var(--DarkCyan);
+}
+.no-stock{
+    background-color: var(--DarkGray);
+}
+.submit-btn{
+    background-color: var(--DarkCyan);
+    float: right;
+    padding: 1.5rem 1.5rem;
+    border-radius: 1.5rem;
+}
+.grey-filter{
+    filter:opacity(0.5);
+}
+.outro{
+    padding: 1rem;
+    border: 1px solid grey;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 60%;
+    position: relative;
+    margin-right: 2rem;
+}
+.inner{
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 60%;
+    top: 25%;
+    left: 25%;
+}
+.pledge-header{
+    align-items: center;
+}
+.pledge-input-container{
+    min-width: 4rem;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    border: 1px solid var(--DarkGray) ;
+    border-radius: 1rem;
+    position: relative;
+}
+.pledge-input{
+    width: 60%;
+    border: none;
+}
+.reward form{
+    border-top: 2px solid gray;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+.error-message{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 2rem;
+    color: red;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 1.5rem 0;
+}

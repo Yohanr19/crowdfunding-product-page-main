@@ -1,0 +1,36 @@
+#stats{
+    margin-top: 2rem;
+    background-color: whitesmoke;
+    display: flex;
+    place-items: center;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+}
+.stat{
+    text-align: center;
+    min-width: 20ch;
+    padding: 1rem;
+}
+.stat h4{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.stat p{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--DarkGray);
+}
+.bar{
+    width: 100%;
+    background-color: var(--DarkGray);
+    height: 2rem;
+    position: relative;
+}
+.bar-progress {
+    background-color: var(--DarkCyan);
+    height: 2rem;
+    position: absolute;
+}
+#progress-container{
+    width: 100%;
+}

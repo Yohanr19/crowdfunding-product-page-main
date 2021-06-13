@@ -1,0 +1,25 @@
+ 
+ #header{ 
+     background-image: url(./images/image-hero-mobile.jpg);
+     width: 100%;
+     padding-bottom: 200px;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ .header-section {
+     padding: 2rem 0rem;
+     position: relative;
+     width: 90%;
+     margin: 0 auto;
+ }
+ #logo{
+    min-width: 15%;
+    max-height: 2rem;
+    float: left;
+
+ }
+ #iconHam-Close{
+     max-width: 35px;
+     max-height: 35px;
+     float: right;
+ }

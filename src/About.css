@@ -1,0 +1,18 @@
+#about{
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+#about h3{
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1.2rem 0rem;
+}
+#about p{
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 1.2rem 0rem;
+    color: var(--DarkGray);
+    max-width: 80ch;
+}
